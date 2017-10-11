@@ -31,6 +31,7 @@ app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'))
 })
 
+
 app.post('/webhook/', function (req, res) {
     let messaging_events = req.body.entry[0].messaging
     for (let i = 0; i < messaging_events.length; i++) {
@@ -45,6 +46,7 @@ app.post('/webhook/', function (req, res) {
 })
 
 const token = "<EAABsOHkUKx0BAI5ZAZCMLUDK4kMcUqZAgn6ZCTMLXZBdZAlA1KqGbpfblSc7amI5n6uKdcvo862oaVEXntNrY4u4HN2wRaajFCihmNTcApIsR7QpGiHqRqgpcVraSQwwUtpsFWlXFOXfouHjHhhG8glGACQI8wkZAkr6X0jof6ZAZB6ZBbI7KU9jBZA>"
+
 
 function sendTextMessage(sender, text) {
     let messageData = { text:text }
